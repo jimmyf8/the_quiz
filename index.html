@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le grand Quizz vous attend, venez tester votre culture générale! "/><!--description du site-->
+    <script src="https://kit.fontawesome.com/6d6fa698d7.js" crossorigin="anonymous"></script><!--lien icône-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"><!--bootstrap-->
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Le Grand quizz</title><!--title-->
+</head>
+
+<body>
+    <header><!--header-->
+        <img src="images/logo.png" class="logo" alt="logo le grand quizz"><!--logo-->
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+               
+            </li>
+            <li class="nav-item">
+                <a id="nav" class="nav-link" href="#resultats">Résultats</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Le grand quizz</a>
+            </li>
+        </ul>
+    </header>
+    <section><!--section-->
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-4">Quizz de culture générale !</h1><!--h1-->
+                <form class="form-quizz"><!--form-->
+                    <div class="question-block" id="question">
+                        <h4>Qui est l'empereur de France le 2 décembre 1804 ? </h4>
+                        <div >
+                            <input type="radio" id="Clovis" name="q1" value="a" checked>
+                            <label for="Clovis">Clovis</label>
+                        </div>
+                        <div >
+                            <input type="radio" id="Lincoln" name="q1" value="b">
+                            <label for="Lincoln">Abraham Lincoln</label>
+                        </div>
+                        <div >
+                            <input type="radio" id="Bonaparte" name="q1" value="c">
+                            <label for="Bonaparte">Napoleon Bonaparte</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h4>Quelle est la date d'indépendance des États-Unis ?</h4>
+                        <div>
+                            <input type="radio" id="date1" name="q2" value="a" checked>
+                            <label for="date1">4 juillet 1776</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="date2" name="q2" value="b">
+                            <label for="date2">18 avril 1856</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="date3" name="q2" value="c">
+                            <label for="date3">30 juin 1925</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h4>La chute de l'empire Romain se situe en ?</h4>
+                        <div>
+                            <input type="radio" id="date4" name="q3" value="a" checked>
+                            <label for="date4">15 ap. J.-C.</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="date5" name="q3" value="b">
+                            <label for="date5">395 ap. J.-C.</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="date6" name="q3" value="c">
+                            <label for="date6">-740 av. J.-C.</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h4>Quelle est la capitale de la Slovénie ?</h4>
+                        <div>
+                            <input type="radio" id="Ljubljana" name="q4" value="a" checked>
+                            <label for="Ljubljana">Ljubljana</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="Belgrade" name="q4" value="b">
+                            <label for="Belgrade">Belgrade</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="Bratislava" name="q4" value="c">
+                            <label for="Bratislava">Bratislava</label>
+                        </div>
+                    </div>
+                    <div class="question-block">
+                        <h4>Combien d'habitants compte l'Irlande en 2020 ?</h4>
+                        <div>
+                            <input type="radio" id="m1" name="q5" value="a" checked>
+                            <label for="m1">1,365 Million</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="m2" name="q5" value="b">
+                            <label for="m2">21 Millions</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="m3" name="q5" value="c">
+                            <label for="m3">4,9 Millions</label>
+                        </div>
+                    </div>
+                    <button type="submit">Validez vos choix !</button><!--button-->
+                </form>
+                <div id="resultats"><!--results-->
+                    <h2>Cliquez sur valider pour voir les résultats.</h2>
+                    <p class="aide"></p>
+                    <p class="note"></p>
+                </div>
+            </div>
+            <script src="app.js"></script><!--script-->
+    </section>
+
+</body>
+
+</html>
