@@ -1,0 +1,17 @@
+//-------------------------------------------------ECHEC_ANIMATION
+@mixin echecAnimation {
+    @keyframes echec {
+        0% {
+            transform: translateX(0px);
+        }
+        33% {
+            transform: translateX(5px);
+        }
+        66% {
+            transform: translateX(-5px);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+      }
+}

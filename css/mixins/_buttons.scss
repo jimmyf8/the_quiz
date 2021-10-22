@@ -1,0 +1,19 @@
+//-------------------------------------------------BUTTON
+@mixin button{
+    form button {
+        border: none;
+        outline: none;
+        border: 1px solid rgb(92, 92, 92);
+        border-radius: 5px;
+        display: block;
+        margin: 20px auto;
+        padding: 20px 40px;
+        cursor: pointer;
+        font-size: 25px;
+        transition: background-color 0.2s ease-in-out;
+    }
+}
+
+form button:hover {
+    background-color: lightblue;
+}
