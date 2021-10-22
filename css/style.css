@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2? family= Angkor & family= Bebas+Neue & display=swap");
+form button:hover {
+  background-color: lightblue;
+}
+
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body a {
+  font-family: 'Bebas Neue', cursif;
+  font-size: 20px;
+}
+
+.logo {
+  position: absolute;
+  left: 620px;
+  width: 80px;
+  margin: 8px;
+  top: 55px;
+}
+
+@media screen and (max-width: 700px) {
+  .logo {
+    width: 55px;
+    left: 220px;
+    top: 60px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #nav {
+    display: none;
+  }
+}
+
+h1 {
+  font-family: 'Bebas Neue', cursif;
+  font-weight: lighter;
+  color: #333;
+  letter-spacing: 10px;
+  text-align: center;
+  margin: 110px;
+  padding: 30px 0;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    margin: 60px;
+    letter-spacing: 0px;
+  }
+}
+
+.container {
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: auto;
+}
+
+.question-block {
+  padding: 15px 25px 25px;
+  margin: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  background: pink;
+}
+
+.question-block h4 {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+.question-block label {
+  font-size: 20px;
+}
+
+.question-block input[type='radio'] {
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+  margin: 10px;
+}
+
+.resultats {
+  padding: 25px;
+  margin: 10px 0px 70px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.resultats h2 {
+  text-align: center;
+}
+
+.aide {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.note {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.echec {
+  -webkit-animation: echec 0.3s ease-in-out;
+          animation: echec 0.3s ease-in-out;
+}
+
+form button {
+  border: none;
+  outline: none;
+  border: 1px solid #5c5c5c;
+  border-radius: 5px;
+  display: block;
+  margin: 20px auto;
+  padding: 20px 40px;
+  cursor: pointer;
+  font-size: 25px;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+}
+
+@-webkit-keyframes echec {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  33% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  66% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes echec {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  33% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  66% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,108 @@
+//-------------------------------------------------IMPORT
+@import 'mixins/./_buttons';
+@import 'mixins/./_animations';
+@import url('https://fonts.googleapis.com/css2? family= Angkor & family= Bebas+Neue & display=swap');
+//-------------------------------------------------GENERAL
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+//-------------------------------------------------POLICE
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    a{
+        font-family: 'Bebas Neue', cursif ;
+        font-size: 20px;
+    }
+}
+//-------------------------------------------------LOGO
+.logo{
+    position: absolute;
+    left: 620px;
+    width: 80px;
+    margin: 8px;
+    top: 55px;
+    @media screen and (max-width:700px){
+        width: 55px;   
+        left: 220px;
+        top: 60px;
+    }
+}
+//-------------------------------------------------NAVIGATION
+@media screen and (max-width:700px){
+    #nav{
+        display: none;
+    }  
+}
+//-------------------------------------------------H1
+h1 {
+    font-family: 'Bebas Neue', cursif ;
+    font-weight: lighter;
+    color: #333;
+    letter-spacing: 10px;
+    text-align: center;
+    margin: 110px ;
+    padding: 30px 0;
+    font-size: 20px;
+    @media screen and (max-width:700px){
+        margin: 60px ;
+        letter-spacing: 0px;
+    }
+}
+//-------------------------------------------------CONTAINER
+.container {
+    width: 70%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: auto;
+    
+}
+.question-block {
+    padding: 15px 25px 25px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    background: pink;
+}
+.question-block h4 {
+    padding: 10px 0;
+    font-size: 22px;
+}
+.question-block label {
+    font-size: 20px;
+}
+.question-block input[type='radio'] {
+    transform: scale(1.8);
+    margin: 10px;
+}
+//-------------------------------------------------RESULTS
+.resultats {
+    padding: 25px;
+    margin: 10px 0px 70px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.resultats h2 {
+    text-align: center;
+}
+//-------------------------------------------------HELP
+.aide {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+//-------------------------------------------------NOTE
+.note {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+}
+//-------------------------------------------------FAILURE
+.echec {
+    animation: echec 0.3s ease-in-out;
+}
+//-------------------------------------------------BUTTON
+@include button;
+//-------------------------------------------------ANIMATION
+@include echecAnimation;
