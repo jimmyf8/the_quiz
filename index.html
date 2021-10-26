@@ -14,11 +14,8 @@
 
 <body>
     <header><!--header-->
-        <img src="images/logo.png" class="logo" alt="logo le grand quizz"><!--logo-->
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-               
-            </li>
+        
+        <ul class="nav justify-center">
             <li class="nav-item">
                 <a id="nav" class="nav-link" href="#resultats">Résultats</a>
             </li>
@@ -31,7 +28,8 @@
         <div class="jumbotron">
             <div class="container">
                 <h1 class="display-4">Quizz de culture générale !</h1><!--h1-->
-                <form class="form-quizz"><!--form-->
+                <img src="images/logo.png" class="logo" alt="logo le grand quizz"><!--logo-->
+                <form id="form_quizz" class="form-quizz"><!--form-->
                     <div class="question-block" id="question">
                         <h4>Qui est l'empereur de France le 2 décembre 1804 ? </h4>
                         <div >
@@ -111,15 +109,17 @@
                     </div>
                     <button type="submit">Validez vos choix !</button><!--button-->
                 </form>
-                <div id="resultats"><!--results-->
+                <div class="jumbotron" id="resultats"><!--results-->
                     <h2>Cliquez sur valider pour voir les résultats.</h2>
                     <p class="aide"></p>
                     <p class="note"></p>
                 </div>
             </div>
-            <script src="app.js"></script><!--script-->
+            <div class="btn_rocket">
+                <i class="fas fa-rocket"></i>
+            </div>     
     </section>
-
+    <script src="app.js"></script><!--script-->
 </body>
 
 </html>
