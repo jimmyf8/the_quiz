@@ -1,7 +1,6 @@
 //-------------------------------------------------IMPORT
 @import 'mixins/./_buttons';
 @import 'mixins/./_animations';
-@import url('https://fonts.googleapis.com/css2? family= Angkor & family= Bebas+Neue & display=swap');
 //-------------------------------------------------GENERAL
 *, ::before, ::after {
     box-sizing: border-box;
@@ -19,14 +18,13 @@ body {
 //-------------------------------------------------LOGO
 .logo{
     position: absolute;
-    left: 620px;
+    left: 540px;
     width: 80px;
     margin: 8px;
     top: 55px;
     @media screen and (max-width:700px){
-        width: 55px;   
-        left: 220px;
-        top: 60px;
+       display: none;
+      
     }
 }
 //-------------------------------------------------NAVIGATION
@@ -40,14 +38,17 @@ h1 {
     font-family: 'Bebas Neue', cursif ;
     font-weight: lighter;
     color: #333;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     text-align: center;
     margin: 110px ;
     padding: 30px 0;
-    font-size: 20px;
+    font-size: 2vmax;
     @media screen and (max-width:700px){
-        margin: 60px ;
+        margin: 9px ;
         letter-spacing: 0px;
+        width: 100%;
+        background-color: white;
+        
     }
 }
 //-------------------------------------------------CONTAINER
@@ -56,6 +57,9 @@ h1 {
     max-width: 800px;
     margin: 0 auto;
     height: auto;
+    @media screen and (max-width:700px){
+        width: 100%;
+    }
     
 }
 .question-block {
@@ -77,11 +81,13 @@ h1 {
     margin: 10px;
 }
 //-------------------------------------------------RESULTS
-.resultats {
+#resultats {
+    position: relative;
     padding: 25px;
     margin: 10px 0px 70px;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    text-align: center;
 }
 .resultats h2 {
     text-align: center;
@@ -104,5 +110,21 @@ h1 {
 }
 //-------------------------------------------------BUTTON
 @include button;
+//-------------------------------------------------ROCKET
+.btn_rocket {
+    position:fixed;
+    right:80px;
+    top: 450px;
+    opacity: 59%;
+    font-size: 50px;
+    :hover{
+        opacity: 49%;
+    }
+    @media screen and (max-width:700px){
+        right:12px;
+        top: 520px;
+        font-size: 30px;
+    }
+}
 //-------------------------------------------------ANIMATION
 @include echecAnimation;
