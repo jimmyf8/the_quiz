@@ -34,6 +34,7 @@ function verifFunc(tabResultats) {
 
     }
     displayResults(checkTable);
+    colorFunc(checkTable);
     checkTable = [];
 }
 //-----------------------------------------------------------------------FUNCTION NUMBER OF ERRORS
@@ -75,6 +76,27 @@ function displayResults(checkToTable) {
           "OOUps cas inattendu!"
     }
 }
+//--------------------------------------------------------------------------FUNCTION COLORS RESPONSES
+function colorFunc(tabValBoolean){
+    for(let i = 0; i< tabValBoolean.length; i++){
+        if(tabValBoolean[i] === true){
+            allQuestions[i].style.background = 'lightgreen';
+        }else{
+            allQuestions[i].style.background ='rgb(204, 78, 88)';
+            setTimeout(() =>{
+                allQuestions[i].classList.add('echec')
+
+            },500)
+        }
+    }
+}
+//--------------------------------------------------------------------------FUNCTION COLORS RESPONSES WHITE
+allQuestions.forEach(item =>{
+    item.addEventListener('click',() =>{
+        item.style.background = "white";
+    })
+})
+
 
 //--------------------------------------------------------------------------ROCKET
 const btn = document.querySelector('.btn_rocket');
