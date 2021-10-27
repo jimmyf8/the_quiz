@@ -6,6 +6,7 @@ const  resultsTitle       = document.querySelector('h2');
 const  resultsNote        = document.querySelector('.note');
 const  resultsHelp        = document.querySelector( '.aide');
 const  allQuestions       = document.querySelectorAll('.question-block');
+const  allResults         = document.getElementById('resultats');
 let    checkTable         = [];
 const  results            = [] ;
 
@@ -46,6 +47,11 @@ function displayResults(checkToTable) {
             resultsTitle.innerText = `${emojis[0]} Bravo, c'est un sans faute ! ${emojis[0]}`
             resultsHelp.innerText  =  ""
             resultsNote.innerText  =  "5/5"
+            setTimeout(() =>{
+               allResults.classList.add('echec');
+               allResults.style.background = 'green';
+               allResults.style.color = 'white';
+            },500)
         break;
         case 1:
             resultsTitle.innerText = `${emojis[1]}Vous y êtes presque !${emojis[1]}`
@@ -82,7 +88,8 @@ function colorFunc(tabValBoolean){
         if(tabValBoolean[i] === true){
             allQuestions[i].style.background = 'lightgreen';
         }else{
-            allQuestions[i].style.background ='rgb(204, 78, 88)';
+            allQuestions[i].style.background ='red';
+            allQuestions[i].style.color ='white';
             setTimeout(() =>{
                 allQuestions[i].classList.add('echec')
 
@@ -94,6 +101,7 @@ function colorFunc(tabValBoolean){
 allQuestions.forEach(item =>{
     item.addEventListener('click',() =>{
         item.style.background = "white";
+        item.style.color = "black";
     })
 })
 
