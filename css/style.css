@@ -19,23 +19,38 @@ body a {
 }
 
 .logo {
-  position: absolute;
-  left: 540px;
   width: 80px;
-  margin: 8px;
-  top: 55px;
+}
+
+.logo:hover {
+  -webkit-animation: echec 0.3s ease-in-out;
+          animation: echec 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 700px) {
   .logo {
-    display: none;
+    margin: 10px;
   }
 }
 
-@media screen and (max-width: 700px) {
-  #nav {
-    display: none;
-  }
+#nav {
+  color: black;
+}
+
+#nav:hover {
+  -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
+  color: #2f8823;
+}
+
+.nav-item {
+  color: #585454;
+}
+
+.nav-item:hover {
+  -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
+  color: #0d2b44;
 }
 
 h1 {
@@ -44,9 +59,11 @@ h1 {
   color: #333;
   letter-spacing: 5px;
   text-align: center;
-  margin: 110px;
+  margin: 10px;
   padding: 30px 0;
   font-size: 2vmax;
+  -webkit-animation: slidedown 5s ease-out;
+          animation: slidedown 5s ease-out;
 }
 
 @media screen and (max-width: 700px) {
@@ -104,8 +121,8 @@ h1 {
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.resultats h2 {
-  text-align: center;
+#resultats h2 {
+  margin: 50px;
 }
 
 .aide {
@@ -116,7 +133,7 @@ h1 {
 
 .note {
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   margin-top: 10px;
 }
 
@@ -194,6 +211,32 @@ form button {
   100% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes slidedown {
+  from {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slidedown {
+  from {
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */

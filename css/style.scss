@@ -17,22 +17,33 @@ body {
 }
 //-------------------------------------------------LOGO
 .logo{
-    position: absolute;
-    left: 540px;
     width: 80px;
-    margin: 8px;
-    top: 55px;
+    &:hover{
+        animation: echec 0.3s ease-in-out;
+    }
     @media screen and (max-width:700px){
-       display: none;
+       margin: 10px;
       
     }
 }
 //-------------------------------------------------NAVIGATION
-@media screen and (max-width:700px){
-    #nav{
-        display: none;
-    }  
+#nav {
+    color: rgb(0, 0, 0);
+    &:hover{
+        box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
+        color: rgb(47, 136, 35);
+    }
 }
+.nav-item
+{
+    color: rgb(88, 84, 84);
+    &:hover{
+        box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
+        color: rgb(13, 43, 68);
+    }
+}
+
+
 //-------------------------------------------------H1
 h1 {
     font-family: 'Bebas Neue', cursif ;
@@ -40,9 +51,10 @@ h1 {
     color: #333;
     letter-spacing: 5px;
     text-align: center;
-    margin: 110px ;
+    margin: 10px ;
     padding: 30px 0;
     font-size: 2vmax;
+    animation: slidedown 5s ease-out;
     @media screen and (max-width:700px){
         margin: 9px ;
         letter-spacing: 0px;
@@ -87,10 +99,11 @@ h1 {
     margin: 10px 0px 70px;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    h2{
+        margin: 50px;
+    }
 }
-.resultats h2 {
-    text-align: center;
-}
+
 //-------------------------------------------------HELP
 .aide {
     text-align: center;
@@ -100,7 +113,7 @@ h1 {
 //-------------------------------------------------NOTE
 .note {
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 10px;
 }
 //-------------------------------------------------FAILURE
@@ -127,3 +140,4 @@ h1 {
 }
 //-------------------------------------------------ANIMATION
 @include echecAnimation;
+@include slideDownAnimation;
