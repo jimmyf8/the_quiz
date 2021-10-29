@@ -239,4 +239,18 @@ form button {
     opacity: 1;
   }
 }
+
+.container-icon {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.slot {
+  position: relative;
+  -webkit-perspective: 100px;
+          perspective: 100px;
+}
 /*# sourceMappingURL=style.css.map */

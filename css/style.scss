@@ -141,3 +141,15 @@ h1 {
 //-------------------------------------------------ANIMATION
 @include echecAnimation;
 @include slideDownAnimation;
+
+//-------------------------------------------------CONFETTI
+.container-icon{
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.slot{
+    position: relative;
+    perspective: 100px;
+}

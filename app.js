@@ -2,6 +2,7 @@
 let    resultsTable         = [];
 const  responses          = ['c','a','b','a','c'];
 const  emojis             = ['✔️','✨','👀','😭','👎'];
+const  emojis2            = ["✨", "✨", "🍑", "🍓"];
 const  resultsTitle       = document.querySelector('h2');
 const  resultsNote        = document.querySelector('.note');
 const  resultsHelp        = document.querySelector( '.aide');
@@ -9,6 +10,13 @@ const  allQuestions       = document.querySelectorAll('.question-block');
 const  allResults         = document.getElementById('resultats');
 let    checkTable         = [];
 const  results            = [] ;
+const  open               = document.querySelector('.open');
+const containerSlot = document.querySelector(".slot");
+
+
+
+
+
 
 //-----------------------------------------------------------------------LISTENING OF SUBMIT
 document.querySelector('.form-quizz').addEventListener('submit',function(e){
@@ -48,10 +56,39 @@ function displayResults(checkToTable) {
             resultsHelp.innerText  =  ""
             resultsNote.innerText  =  "5/5"
             setTimeout(() =>{
-               allResults.classList.add('echec');
+               allResults.classList.add('.open');
                allResults.style.background = 'green';
                allResults.style.color = 'white';
+               fiesta();
             },500)
+            //confettis
+            function fiesta() {
+                for (let i = 0; i < 80; i++) {
+                  const confetti = document.createElement("div");
+                  confetti.innerText = emojis2[Math.floor(Math.random() * emojis2.length)];
+                  containerSlot.appendChild(confetti);
+                }
+              
+                animateConfettis();
+              }
+              
+              function animateConfettis() {
+                
+                const TLCONF = gsap.timeline();
+              
+                TLCONF.to(".slot div", {
+                  y: "random(-80,80)",
+                  x: "random(-80,80)",
+                  z: "random(0,100)",
+                  rotation: "random(-90,90)",
+                  duration: 4,
+                })
+                  .to(".slot div", { autoAlpha: 5, duration: 0.9 }, "-=0.9")
+                  .add(() => {
+                    containerSlot.innerHTML = "";
+                  });
+              }
+            
         break;
         case 1:
             resultsTitle.innerText = `${emojis[1]}Vous y êtes presque !${emojis[1]}`
