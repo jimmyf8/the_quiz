@@ -1,22 +1,23 @@
 //-----------------------------------------------------------------------DECLARATIONS
-let    resultsTable         = [];
+let    resultsTable       = [];
 const  responses          = ['c','a','b','a','c'];
 const  emojis             = ['★︎★︎★︎★︎★︎','★︎★︎★︎★︎','★︎★︎★︎','★︎★︎','★︎'];
 const  emojis2            = ["♤︎", "♦︎", "♥︎", "♠︎"];
 const  resultsTitle       = document.querySelector('h2');
+const  allQuestions       = document.querySelectorAll('.question-block');
 const  resultsNote        = document.querySelector('.note');
 const  resultsHelp        = document.querySelector( '.aide');
-const  allQuestions       = document.querySelectorAll('.question-block');
 const  allResults         = document.getElementById('resultats');
 let    checkTable         = [];
 const  results            = [] ;
-const  open               = document.querySelector('.open');
-const containerSlot = document.querySelector(".slot");
+const containerSlot       = document.querySelector(".slot");
 
+//--------------------------------------------------------------------------LE P'TIT QUIZZ
+const lePtitQuizz = document.querySelector('.nav-link_disabled');
 
-
-
-
+lePtitQuizz.addEventListener('click', () => {
+    location.reload();
+})
 
 //-----------------------------------------------------------------------LISTENING OF SUBMIT
 document.querySelector('.form-quizz').addEventListener('submit',function(e){
@@ -96,7 +97,7 @@ function displayResults(checkToTable) {
             resultsNote.innerText  =  "4/5"
         break;
         case 2:
-            resultsTitle.innerText = `Encore un effort ...${emojis[2]}`
+            resultsTitle.innerText = `${emojis[2]} Encore un effort ...`
             resultsHelp.innerText  =  "Retentez une autre réponse dans la case noire, puis re-validez !"
             resultsNote.innerText  =  "3/5"
         break;
@@ -155,4 +156,5 @@ btn.addEventListener('click', () => {
     })
 
 })
+
 

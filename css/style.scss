@@ -34,15 +34,25 @@ body {
         color: rgb(131, 134, 130);
     }
 }
-.nav-item
-{
-    color: rgb(88, 84, 84);
+.nav-item 
+{   display: flex;
+    align-items: center;
+    list-style: none;
+    color: rgb(163, 39, 39);
     &:hover{
         box-shadow: 0 18px 16px 0 rgba(0,0,0,0.2);
-        color: rgb(13, 43, 68);
+        text-decoration: none;
     }
 }
 
+a{
+    color: #333;
+    &:hover{
+        color: rgb(131, 134, 130);
+        text-decoration: none;
+        padding: 10px;
+    }
+}
 
 //-------------------------------------------------H1
 h1 {
@@ -55,11 +65,14 @@ h1 {
     padding: 30px 0;
     font-size: 2vmax;
     animation: slidedown 5s ease-out;
+    &:hover{
+        color: rgb(0, 0, 0);
+    }
     @media screen and (max-width:700px){
         margin: 9px ;
         letter-spacing: 0px;
         width: 100%;
-        background-color: white;
+    
         
     }
 }
@@ -124,17 +137,17 @@ h1 {
 @include button;
 //-------------------------------------------------ROCKET
 .btn_rocket {
-    position:fixed;
-    right:80px;
-    top: 450px;
     opacity: 59%;
     font-size: 50px;
+    position:fixed;
+    bottom:10%;
+    right:5%;
+    z-index:9999;
     :hover{
         opacity: 49%;
     }
     @media screen and (max-width:700px){
-        right:12px;
-        top: 520px;
+      
         font-size: 30px;
     }
 }
@@ -153,3 +166,4 @@ h1 {
     position: relative;
     perspective: 100px;
 }
+

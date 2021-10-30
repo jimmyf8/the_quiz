@@ -44,13 +44,30 @@ body a {
 }
 
 .nav-item {
-  color: #585454;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  color: #a32727;
 }
 
 .nav-item:hover {
   -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
-  color: #0d2b44;
+  text-decoration: none;
+}
+
+a {
+  color: #333;
+}
+
+a:hover {
+  color: #838682;
+  text-decoration: none;
+  padding: 10px;
 }
 
 h1 {
@@ -66,12 +83,15 @@ h1 {
           animation: slidedown 5s ease-out;
 }
 
+h1:hover {
+  color: black;
+}
+
 @media screen and (max-width: 700px) {
   h1 {
     margin: 9px;
     letter-spacing: 0px;
     width: 100%;
-    background-color: white;
   }
 }
 
@@ -157,11 +177,12 @@ form button {
 }
 
 .btn_rocket {
-  position: fixed;
-  right: 80px;
-  top: 450px;
   opacity: 59%;
   font-size: 50px;
+  position: fixed;
+  bottom: 10%;
+  right: 5%;
+  z-index: 9999;
 }
 
 .btn_rocket :hover {
@@ -170,8 +191,6 @@ form button {
 
 @media screen and (max-width: 700px) {
   .btn_rocket {
-    right: 12px;
-    top: 520px;
     font-size: 30px;
   }
 }
