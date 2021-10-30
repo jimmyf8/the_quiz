@@ -40,7 +40,7 @@ body a {
 #nav:hover {
   -webkit-box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 18px 16px 0 rgba(0, 0, 0, 0.2);
-  color: #2f8823;
+  color: #838682;
 }
 
 .nav-item {
@@ -94,7 +94,7 @@ h1 {
   border-radius: 5px;
   -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-  background: pink;
+  background: #aaa9a9;
 }
 
 .question-block h4 {

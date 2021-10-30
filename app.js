@@ -1,8 +1,8 @@
 //-----------------------------------------------------------------------DECLARATIONS
 let    resultsTable         = [];
 const  responses          = ['c','a','b','a','c'];
-const  emojis             = ['✔️','✨','👀','😭','👎'];
-const  emojis2            = ["✨", "✨", "✔️", "✔️"];
+const  emojis             = ['★︎★︎★︎★︎★︎','★︎★︎★︎★︎','★︎★︎★︎','★︎★︎','★︎'];
+const  emojis2            = ["♤︎", "♦︎", "♥︎", "♠︎"];
 const  resultsTitle       = document.querySelector('h2');
 const  resultsNote        = document.querySelector('.note');
 const  resultsHelp        = document.querySelector( '.aide');
@@ -52,12 +52,12 @@ function displayResults(checkToTable) {
  //-----------------------------------------------------------------------RESULTS   
     switch(numError) {
         case 0:
-            resultsTitle.innerText = `${emojis[0]} Bravo, c'est un sans faute ! ${emojis[0]}`
+            resultsTitle.innerText = `${emojis[0]} Bravo, c'est un sans faute ! `
             resultsHelp.innerText  =  ""
             resultsNote.innerText  =  "5/5"
             setTimeout(() =>{
                allResults.classList.add('.open');
-               allResults.style.background = 'green';
+               allResults.style.background = 'lightgreen';
                allResults.style.color = 'white';
                fiesta();
             },500)
@@ -91,28 +91,28 @@ function displayResults(checkToTable) {
             
         break;
         case 1:
-            resultsTitle.innerText = `${emojis[1]}Vous y êtes presque !${emojis[1]}`
-            resultsHelp.innerText  =  "Retentez une autre réponse dans la case rouge, puis re-validez !"
+            resultsTitle.innerText = `${emojis[1]} Vous y êtes presque !`
+            resultsHelp.innerText  =  "Retentez une autre réponse dans la case noire, puis re-validez !"
             resultsNote.innerText  =  "4/5"
         break;
         case 2:
             resultsTitle.innerText = `Encore un effort ...${emojis[2]}`
-            resultsHelp.innerText  =  "Retentez une autre réponse dans la case rouge, puis re-validez !"
+            resultsHelp.innerText  =  "Retentez une autre réponse dans la case noire, puis re-validez !"
             resultsNote.innerText  =  "3/5"
         break;
         case 3:
-            resultsTitle.innerText = `Il reste quelques erreurs.${emojis[2]}`
-            resultsHelp.innerText  =  "Retentez une autre réponse dans la case rouge, puis re-validez !"
+            resultsTitle.innerText = `${emojis[2]} Il reste quelques erreurs.`
+            resultsHelp.innerText  =  "Retentez une autre réponse dans la case noire, puis re-validez !"
             resultsNote.innerText  =  "2/5"
         break;
         case 4:
-            resultsTitle.innerText = `Peux mieux faire ! ${emojis[4]}`
-            resultsHelp.innerText  =  "Retentez une autre réponse dans la case rouge, puis re-validez !"
+            resultsTitle.innerText = `${emojis[4]} Peux mieux faire ! `
+            resultsHelp.innerText  =  "Retentez une autre réponse dans la case noire, puis re-validez !"
             resultsNote.innerText  =  "1/5"
         break;
         case 4:
-            resultsTitle.innerText = `${emojis[4]}Quand même... ${emojis[4]}`
-            resultsHelp.innerText  =  "Retentez une autre réponse dans la case rouge, puis re-validez !"
+            resultsTitle.innerText = `${emojis[4]} Quand même... `
+            resultsHelp.innerText  =  "Retentez une autre réponse dans la case noire, puis re-validez !"
             resultsNote.innerText  =  "0/5"
         break;
         default:
@@ -123,9 +123,9 @@ function displayResults(checkToTable) {
 function colorFunc(tabValBoolean){
     for(let i = 0; i< tabValBoolean.length; i++){
         if(tabValBoolean[i] === true){
-            allQuestions[i].style.background = 'lightgreen';
+            allQuestions[i].style.background = 'lightblue';
         }else{
-            allQuestions[i].style.background ='red';
+            allQuestions[i].style.background ='black'
             allQuestions[i].style.color ='white';
             setTimeout(() =>{
                 allQuestions[i].classList.add('echec')
