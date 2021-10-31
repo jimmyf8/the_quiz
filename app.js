@@ -2,7 +2,7 @@
 let    resultsTable       = [];
 const  responses          = ['c','a','b','a','c'];
 const  emojis             = ['★︎★︎★︎★︎★︎','★︎★︎★︎★︎','★︎★︎★︎','★︎★︎','★︎'];
-const  emojis2            = ["♤︎", "♦︎", "♥︎", "♠︎"];
+const  emojis2            = ["♤︎", "♧︎", "♡︎", "♢︎"];
 const  resultsTitle       = document.querySelector('h2');
 const  allQuestions       = document.querySelectorAll('.question-block');
 const  resultsNote        = document.querySelector('.note');
